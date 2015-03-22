@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_mcircle_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Mcircle
+  <% end %>
+  <h1>Listing mcircles</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Number</th>
+            <th>State</th>
+            <th>Network</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @mcircles) do |mcircle| %>
+            <td><%= mcircle.number %></td>
+            <td><%= mcircle.state %></td>
+            <td><%= mcircle.network %></td>
+            <td><%= link_to 'Show', mcircle %></td>
+        <td><%= link_to 'Edit', edit_mcircle_path(mcircle) %></td>
+        <td><%= link_to 'Destroy', mcircle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to new_calllog_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Calllog
+  <% end %>
+  <h1>Listing calllogs</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>User</th>
+            <th>Caller</th>
+            <th>Duration</th>
+            <th>Called on</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @calllogs) do |calllog| %>
+            <td><%= calllog.user_id %></td>
+            <td><%= calllog.caller %></td>
+            <td><%= calllog.duration %></td>
+            <td><%= calllog.called_on %></td>
+            <td><%= link_to 'Show', calllog %></td>
+        <td><%= link_to 'Edit', edit_calllog_path(calllog) %></td>
+        <td><%= link_to 'Destroy', calllog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

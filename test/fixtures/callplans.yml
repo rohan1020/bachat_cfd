@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  price: 1
+  network: MyString
+  state: MyString
+  plantype: 1
+  ratepersec: MyString
+  ratepermin: MyString
+  ratepersec_std: MyString
+  ratepermin_std: MyString
+
+two:
+  name: MyString
+  description: MyText
+  price: 1
+  network: MyString
+  state: MyString
+  plantype: 1
+  ratepersec: MyString
+  ratepermin: MyString
+  ratepersec_std: MyString
+  ratepermin_std: MyString

@@ -55,5 +55,6 @@ end
 
 gem "bootstrap-generators"
 
+gem 'nokogiri'
 #gem "unicorn-rails"
 gem "devise"

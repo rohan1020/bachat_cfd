@@ -1,0 +1,44 @@
+<%= form_for(@calllog, :html => { :class => "form-horizontal" }) do |f| %>
+  <% if @calllog.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@calllog.errors.count, "error") %> prohibited this calllog from being saved:</h4>
+
+      <ul>
+      <% @calllog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :user_id, :class => "col-lg-2 control-label" %>
+    <div class="col-lg-10">
+      <%= f.number_field :user_id, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :caller, :class => "col-lg-2 control-label" %>
+    <div class="col-lg-10">
+      <%= f.text_field :caller, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :duration, :class => "col-lg-2 control-label" %>
+    <div class="col-lg-10">
+      <%= f.number_field :duration, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :called_on, :class => "col-lg-2 control-label" %>
+    <div class="col-lg-10">
+      <%= f.datetime_select :called_on, :class => "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit :class => "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

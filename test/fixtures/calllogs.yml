@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  caller: MyString
+  duration: 1
+  called_on: 2015-03-21 15:11:00
+
+two:
+  user_id: 1
+  caller: MyString
+  duration: 1
+  called_on: 2015-03-21 15:11:00

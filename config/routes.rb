@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  resources :callplans
+
+  get 'api/sortnumbers'
+
+  get 'api/getplans'
+
+  resources :calllogs
+
+  resources :users
+
+  resources :mcircles
+
+  get 'parse' => 'mcircles#parse'
+
+  get 'querynum' => 'mcircles#querynum'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

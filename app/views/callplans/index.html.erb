@@ -1,0 +1,47 @@
+<div class="page-header">
+  <%= link_to new_callplan_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Callplan
+  <% end %>
+  <h1>Listing callplans</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Network</th>
+            <th>State</th>
+            <th>Plantype</th>
+            <th>Ratepersec</th>
+            <th>Ratepermin</th>
+            <th>Ratepersec std</th>
+            <th>Ratepermin std</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @callplans) do |callplan| %>
+            <td><%= callplan.name %></td>
+            <td><%= callplan.description %></td>
+            <td><%= callplan.price %></td>
+            <td><%= callplan.network %></td>
+            <td><%= callplan.state %></td>
+            <td><%= callplan.plantype %></td>
+            <td><%= callplan.ratepersec %></td>
+            <td><%= callplan.ratepermin %></td>
+            <td><%= callplan.ratepersec_std %></td>
+            <td><%= callplan.ratepermin_std %></td>
+            <td><%= link_to 'Show', callplan %></td>
+        <td><%= link_to 'Edit', edit_callplan_path(callplan) %></td>
+        <td><%= link_to 'Destroy', callplan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
